@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FinalProject</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+      <!-- Font Awesome -->
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+      <!-- Bootstrap core CSS -->
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+      <!-- Material Design Bootstrap -->
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.3/css/mdb.min.css" rel="stylesheet">
+
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+      
+  <div class = "jumbotron margincero paddinglow text-center">
+      <img src="http://oi63.tinypic.com/2lvb5g5.jpg" width="170px" class="pull-right paddinglow">
+  </div>
+
+  <nav class="navbar sticky-top navbar-expand-lg navbar-dark cyan darken-1">
+    <a class="navbar-brand" href="#"><strong>Navbar</strong></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="<%=root_path%>"><strong>I n i c i o</strong><span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="<%=tratamientos_path%>"><strong>Tratamientos</strong></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="<%=convenios_path%>"><strong>Convenios</strong></a>
+            </li>
+             <%= link_to 'Cerrar Sesion', destroy_user_session_path, method: :delete, class: 'nav-link' %>
+      </ul>
+      <ul class="navbar-nav mr-right">
+            <li class="nav-item">
+                <%= link_to "Regístrate", new_user_registration_path, class: 'btn btn-outline-light', method: :get %>
+                <%= link_to "Ingresa", new_user_session_path, class: 'btn btn-outline-light', method: :get %>
+                 <%= link_to "Reserva Online", new_user_session_path, class: 'btn btn-outline-dark', method: :get %>
+            </li>
+      </ul>
+    </div>
+  </nav>
+
+
+
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    
+
+
+    <%= yield %>
+    <br>
+
+        <footer class="page-footer font-small unique-color-dark">
+
+          <div style="background-color:#00acc1;">
+            <div class="container">
+
+              
+              <div class="row py-4 d-flex align-items-center">
+
+               
+                <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+                  <h6 class="mb-0"></h6>
+                </div>
+               
+                <div class="col-md-6 col-lg-7 text-center text-md-right">
+
+                  <!-- Facebook -->
+                  <a class="fb-ic">
+                    <i class="fab fa-facebook-f white-text mr-4"> </i>
+                  </a>
+                  <!-- Twitter -->
+                  <a class="tw-ic">
+                    <i class="fab fa-twitter white-text mr-4"> </i>
+                  </a>
+                  <!-- Google +-->
+                  <a class="gplus-ic">
+                    <i class="fab fa-google-plus-g white-text mr-4"> </i>
+                  </a>
+                  <!--Linkedin -->
+                  <a class="li-ic">
+                    <i class="fab fa-linkedin-in white-text mr-4"> </i>
+                  </a>
+                  <!--Instagram-->
+                  <a class="ins-ic">
+                    <i class="fab fa-instagram white-text"> </i>
+                  </a>
+
+                </div>
+                <!-- Grid column -->
+
+              </div>
+              <!-- Grid row-->
+
+            </div>
+          </div>
+
+          <!-- Footer Links -->
+          <div class="container text-center text-md-left mt-5">
+
+            <!-- Grid row -->
+            <div class="row mt-3">
+
+              <!-- Grid column -->
+              <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+
+                <!-- Content -->
+                <h6 class="text-uppercase font-weight-bold">Clinica Dentix</h6>
+                <hr class="cyan darken-1 accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                <p>Consulta por horas disponibles y reserva tu hora. Presupuesto Gratis</p>
+
+              </div>
+              <!-- Grid column -->
+
+              <!-- Grid column -->
+              <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+
+                <!-- Links -->
+                <h6 class="text-uppercase font-weight-bold">Especialidades</h6>
+                <hr class="cyan darken-1 accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                <p>
+                  <a href="#!">Endodoncia</a>
+                </p>
+                <p>
+                  <a href="#!">Periodoncia</a>
+                </p>
+                <p>
+                  <a href="#!">Odontopediatria</a>
+                </p>
+                <p>
+                  <a href="#!">Rehabilitación Oral</a>
+                </p>
+
+              </div>
+              <!-- Grid column -->
+
+              <!-- Grid column -->
+              <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+
+                <!-- Links -->
+                <h6 class="text-uppercase font-weight-bold">Horarios</h6>
+                <hr class="cyan darken-1 accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                <p>
+                  <a href="#!">De lunes a Viernes</a>
+                </p>
+                <p>
+                  <a href="#!">De 9:00 a 19:00hrs</a>
+                </p>
+              
+
+              </div>
+              <!-- Grid column -->
+
+              <!-- Grid column -->
+              <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+                <!-- Links -->
+                <h6 class="text-uppercase font-weight-bold">Contacto</h6>
+                <hr class="cyan darken-1 accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                <p>
+                  <i class="fas fa-home mr-3"></i> San Isidro 435, Santiago</p>
+                <p>
+                  <i class="fas fa-envelope mr-3"></i> contacto@dentix.cl</p>
+                <p>
+                  <i class="fas fa-phone mr-3"></i> + 569 97667731</p>
+                <p>
+                  <i class="fas fa-print mr-3"></i> + 52 4725944</p>
+
+              </div>
+              <!-- Grid column -->
+
+            </div>
+            <!-- Grid row -->
+
+          </div>
+          <!-- Footer Links -->
+
+          <!-- Copyright -->
+          <div class="footer-copyright text-center py-3">© 2018 Copyright:
+            <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
+          </div>
+          <!-- Copyright -->
+
+        </footer>
+        <!-- Footer -->
+
+  
+
+    
+      <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.3/js/mdb.min.js"></script>
+    
+  </body>
+ 
+</html>
