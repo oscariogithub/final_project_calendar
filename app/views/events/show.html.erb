@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong></strong>
+  <%= @event.title %>
+</p>
+
+<p>
+  <strong>Hora:</strong>
+  <%= @event.start %>
+</p>
+
+<p>
+  <strong>Nombre Paciente:</strong>
+  <%= @event.user.try(:name) %>
+</p>
+
+<p>
+  <strong>RUT:</strong>
+  <%= @event.user.try(:rut) %>
+</p>
+
+<%= link_to 'Edit', edit_event_path(@event) %> |
+<%= link_to 'Back', events_path %>

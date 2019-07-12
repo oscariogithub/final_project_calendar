@@ -1,5 +1,9 @@
 {
   "name": "final_project",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "fullcalendar": "^3.10.0",
+    "moment": "^2.24.0",
+    "popper.js": "^1.15.0"
+  }
 }
