@@ -3,19 +3,23 @@ $(document).on('ready turbolinks:load', function(){
         headers: { 'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content') }
     });
     $('#calendar').fullCalendar({
+        plugins: [ 'interaction' ],
+        selectable: true,
         events: '/events', 
-        color: 'yellow',       
-        textColor: 'black',
+        color: 'yellow', 
+        contentHeight: 'auto',      
+        eventTextColor: 'white',
         lang: 'es',
         defaultView: 'agendaWeek',
         allDaySlot: false,
+        firstDay: 1, 
         minTime: "09:00:00",
         maxTime: "18:00:00",
         slotDuration: "00:30:00",
         slotLabelInterval: "00:30:00",
         slotLabelFormat: "h(:mm)a",
         defaultTimedEventDuration:'00:30',
-        plugins: [ 'interaction' ],
+        
         eventDrop: function(event, delta, revertFunc) {
                     console.log(delta);
                     $.ajax({
@@ -25,9 +29,10 @@ $(document).on('ready turbolinks:load', function(){
                         data: {event: {start: event.start.format() }}
                     })
         },
-        eventClick: function(event){
+        
+        select: function(event){
                     $.ajax({
-                        url: '/events/' + event.id + '/edit',
+                        url: '/events/new',
                         type: 'GET',
                         dataType: 'script'
                     })

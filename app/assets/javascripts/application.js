@@ -15,5 +15,7 @@
 //= require turbolinks
 //= require moment/moment
 //= require fullcalendar/dist/fullcalendar
+//= require @fullcalendar/interaction/main
+//= require fullcalendar/dist/locale/es.js
 //= require popper.js/dist/umd/popper
 //= require_tree .
