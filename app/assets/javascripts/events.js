@@ -19,6 +19,8 @@ $(document).on('ready turbolinks:load', function(){
         slotLabelInterval: "00:30:00",
         slotLabelFormat: "h(:mm)a",
         defaultTimedEventDuration:'00:30',
+        defaultRangeSeparator:'00-30',
+        
         
         eventDrop: function(event, delta, revertFunc) {
                     console.log(delta);
