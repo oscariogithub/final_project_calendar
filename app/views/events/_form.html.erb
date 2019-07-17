@@ -10,18 +10,12 @@
         </ul>
       </div>
     <% end %>
-
-    <div class="field">
-      <%= form.label :title %>
-      <%= form.text_field :title %>
-    </div>
-
     <div class="field">
       <%= form.label :start %>
       <%= form.datetime_select :start %>
     </div>
 
     <div class="actions">
-      <%= form.submit %>
+      <%= form.submit 'Reserva', class: 'btn btn-primary' %>
     </div>
 <% end %>

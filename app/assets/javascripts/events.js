@@ -22,6 +22,7 @@ $(document).on('ready turbolinks:load', function(){
         defaultRangeSeparator:'00-30',
         
         
+        
         eventDrop: function(event, delta, revertFunc) {
                     console.log(delta);
                     $.ajax({
