@@ -7,6 +7,7 @@ ruby '2.6.3'
 gem 'rails', '~> 5.2.3'
 # Use sqlite3 as the database for Active Record
 gem 'cancancan'
+gem 'activeadmin'
 
 gem 'devise', git: "https://github.com/plataformatec/devise.git"
 # Use Puma as the app server
